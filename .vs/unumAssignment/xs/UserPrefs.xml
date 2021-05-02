@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{A37B2783-8432-43E3-B4FB-9ADFE422BA3F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="unumAssignment/Properties/launchSettings.json">
+    <Files>
+      <File FileName="unumAssignment/Controllers/UnumController.cs" Line="11" Column="23" />
+      <File FileName="unumAssignment/Model/UnumResponse.cs" Line="11" Column="1" />
+      <File FileName="unumAssignment/Properties/launchSettings.json" Line="21" Column="30" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="unumAssignment" expanded="True">
+            <Node name="unumAssignment" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Model" expanded="True" />
+              <Node name="Properties" expanded="True">
+                <Node name="launchSettings.json" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.unumAssignment PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/martina/Projects/unumAssignment/unumAssignment/Controllers/UnumController.cs" relfile="unumAssignment/Controllers/UnumController.cs" line="16" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
