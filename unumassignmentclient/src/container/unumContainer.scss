@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+
+    .column{
+        flex-grow: 1;
+    }
+
+    table{
+        width: 100%;
+    }
+
+    .button{
+        border-radius: 3px;
+        background-color: steelblue;
+        color: white;
+        font-size: 25px;
+        border: 1px solid transparent;
+        margin: 10px;
+        width: 40px;
+
+        &:hover{
+            border: 1px solid steelblue;
+            background-color: white;
+            color: steelblue;
+            position: cursor;
+        }
+
+        &[disabled]{
+            background-color: gray;
+            pointer-events: none;
+        }
+
+        &.wide{
+            width: 150px;
+        }
+    }
+}

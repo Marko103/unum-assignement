@@ -1,0 +1,12 @@
+.number-box{
+    margin: 5px;
+
+    &__input{
+        border: 1px solid gray;
+        border-radius: 3px;
+        font-size: 14px;
+        padding: 5px;
+        text-align: center;
+        margin-left: 10px;
+    }
+}

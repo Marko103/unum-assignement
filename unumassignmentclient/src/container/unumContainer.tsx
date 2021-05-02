@@ -56,16 +56,17 @@ const UnumContainer: React.FC = (props) => {
   }, [toggleClearInput]);
 
   return (
-    <div>
-      <div>
-        <button type="button" onClick={onAdd}>
+    <div className="container">
+      <div className="column">
+        <button type="button" className="button" onClick={onAdd}>
           +
         </button>
-        <button type="button" onClick={onRemove}>
+        <button type="button" className="button" onClick={onRemove}>
           -
         </button>
         <button
           type="button"
+          className="button wide"
           onClick={calculate}
           disabled={isCalculateDisabled()}
         >
@@ -74,7 +75,7 @@ const UnumContainer: React.FC = (props) => {
         <div>{renderInputs()}</div>
       </div>
 
-      <div>
+      <div className="column"> 
         <h3>Result table</h3>
         <table>
           <thead>

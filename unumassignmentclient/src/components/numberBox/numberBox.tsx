@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./numberBox.scss";
 
 export interface INumberBox {
   boxKey: number;
@@ -21,7 +22,18 @@ const NumberBox: React.FC<INumberBox> = (props) => {
   }, [toggleClearInput]);
 
   return (
-    <input type="text" key={boxKey} onChange={onChange} value={inputValue} />
+    <div className="number-box">
+      <label>
+        {props.boxKey + 1}.
+        <input
+          type="text"
+          key={boxKey}
+          className="number-box__input"
+          onChange={onChange}
+          value={inputValue}
+        />
+      </label>
+    </div>
   );
 };
 
