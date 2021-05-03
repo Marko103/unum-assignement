@@ -26,6 +26,7 @@ const NumberBox: React.FC<INumberBox> = (props) => {
       <label>
         {props.boxKey + 1}.
         <input
+          data-testid={"input" + boxKey}
           type="text"
           key={boxKey}
           className="number-box__input"
