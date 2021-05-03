@@ -3,18 +3,10 @@ import NumberBox from "./numberBox";
 
 describe("NumberBox tests", () => {
   const setup = (
-    params: {
-      boxKey: number;
-      toggleClearInput: boolean;
-      onInputChanged: (key: number, value: string) => void;
-    } = {
-      boxKey: 0,
-      toggleClearInput: true,
-      onInputChanged: jest.fn(),
-    }
+    boxKey: number = 0,
+    toggleClearInput: boolean = false,
+    onInputChanged: (key: number, value: string) => void = jest.fn()
   ) => {
-    const { boxKey, toggleClearInput, onInputChanged } = params;
-
     const renderProps = render(
       <NumberBox
         boxKey={boxKey}
@@ -37,10 +29,10 @@ describe("NumberBox tests", () => {
 
     const changeValue = "23";
 
-    const inputField = screen.getByTestId("input0");
+    const inputField = screen.getByDisplayValue("");
 
     // change value in input field
-    fireEvent.change(inputField, { target: { value: 23 } });
+    fireEvent.change(inputField, { target: { value: changeValue } });
 
     // check if value is changed
     screen.getByDisplayValue(changeValue);
@@ -49,13 +41,10 @@ describe("NumberBox tests", () => {
     rerender(
       <NumberBox
         boxKey={0}
-        toggleClearInput={false}
+        toggleClearInput={true}
         onInputChanged={jest.fn()}
       ></NumberBox>
     );
-
-    // input field should have been cleared
-    expect(() => screen.getByDisplayValue(changeValue)).toThrowError();
 
     screen.getByDisplayValue("");
   });
@@ -69,11 +58,7 @@ describe("NumberBox tests", () => {
       expect(value).toEqual(changeValue);
     };
 
-    setup({
-      boxKey: 0,
-      toggleClearInput: true,
-      onInputChanged: onChange,
-    });
+    setup(0, false, onChange);
 
     const inputField = screen.getByTestId("input0");
 
