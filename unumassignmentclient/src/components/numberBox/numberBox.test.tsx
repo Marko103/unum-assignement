@@ -35,13 +35,15 @@ describe("NumberBox tests", () => {
   test("Clear input value on toggle change", () => {
     const { rerender } = setup();
 
+    const changeValue = "23";
+
     const inputField = screen.getByTestId("input0");
 
     // change value in input field
     fireEvent.change(inputField, { target: { value: 23 } });
 
     // check if value is changed
-    screen.getByDisplayValue("23");
+    screen.getByDisplayValue(changeValue);
 
     // rerender with changed toggle prop
     rerender(
@@ -53,7 +55,7 @@ describe("NumberBox tests", () => {
     );
 
     // input field should have been cleared
-    expect(() => screen.getByDisplayValue("23")).toThrowError();
+    expect(() => screen.getByDisplayValue(changeValue)).toThrowError();
 
     screen.getByDisplayValue("");
   });
